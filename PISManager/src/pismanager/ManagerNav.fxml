@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="76.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pismanager.ManagerNavController">
+   <children>
+      <Pane prefHeight="76.0" prefWidth="820.0">
+         <children>
+            <JFXButton layoutX="244.0" layoutY="13.0" onAction="#proizvodi" prefHeight="51.0" prefWidth="93.0" ripplerFill="#fbf9f8" style="-fx-background-color: #32aa9f;" text="Proizvodi" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="347.0" layoutY="13.0" onAction="#skladiste" prefHeight="51.0" prefWidth="102.0" ripplerFill="#fbf9f8" style="-fx-background-color: #32aa9f;" text="Skladište" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="459.0" layoutY="14.0" onAction="#narudzbe" prefHeight="51.0" prefWidth="102.0" ripplerFill="#fbf9f8" style="-fx-background-color: #32aa9f;" text="Narudzbe" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="669.0" layoutY="13.0" onAction="#btnLogout" prefHeight="51.0" prefWidth="142.0" ripplerFill="#fbf9f8" style="-fx-background-color: #32aa9f;" text="Izlaz iz sustava" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="10.0" layoutY="26.0" prefHeight="25.0" prefWidth="217.0" text="Dobrodošli na sustav">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label fx:id="lbl" layoutX="78.0" layoutY="31.0" prefHeight="16.0" prefWidth="114.0" />
+            <JFXButton layoutX="569.0" layoutY="13.0" onAction="#statistika" prefHeight="51.0" prefWidth="93.0" ripplerFill="#fbf9f8" style="-fx-background-color: #32aa9f;" text="Statistika" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

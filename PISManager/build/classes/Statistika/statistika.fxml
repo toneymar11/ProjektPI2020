@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="679.0" prefWidth="1145.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Statistika.statistikaController">
+   <children>
+      <Pane prefHeight="679.0" prefWidth="1181.0">
+         <children>
+            <Pane layoutX="591.0" prefHeight="148.0" prefWidth="577.0" style="-fx-background-color: #fbf9f8;">
+               <children>
+                  <Pane layoutX="49.0" layoutY="36.0" prefHeight="83.0" prefWidth="197.0" style="-fx-background-color: #32aa9f;">
+                     <children>
+                        <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/neodobreno.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="49.0" layoutY="3.0" text="Neodobrenih narudžbi" textFill="WHITE" />
+                        <Label fx:id="brojneodobrenih" alignment="CENTER" layoutX="61.0" layoutY="18.0" prefHeight="58.0" prefWidth="132.0" text="50" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="309.0" layoutY="36.0" prefHeight="83.0" prefWidth="197.0" style="-fx-background-color: #32aa9f;">
+                     <children>
+                        <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/odobreno.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="60.0" layoutY="8.0" text="Odobrenih narudžbi" textFill="WHITE" />
+                        <Label fx:id="brojodobrenih" alignment="CENTER" layoutX="65.0" layoutY="24.0" prefHeight="58.0" prefWidth="132.0" text="50" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="-2.0" layoutY="167.0" prefHeight="510.0" prefWidth="1181.0" style="-fx-background-color: #fbf9f8;">
+               <children>
+                  <TableView fx:id="statistikaTablica" layoutX="804.0" layoutY="27.0" prefHeight="463.0" prefWidth="342.0">
+                    <columns>
+                      <TableColumn fx:id="naziv" prefWidth="241.0" text="Naziv proizvoda" />
+                      <TableColumn fx:id="kolicina" prefWidth="99.0" text="Kolicina" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <PieChart fx:id="Chart" layoutX="14.0" layoutY="14.0" prefHeight="488.0" prefWidth="746.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="148.0" prefWidth="521.0" style="-fx-background-color: #fbf9f8;">
+               <children>
+                  <Pane layoutX="33.0" layoutY="33.0" prefHeight="83.0" prefWidth="197.0" style="-fx-background-color: #32aa9f;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="47.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/korisnik.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="99.0" layoutY="8.0" text="Proizvodjaci" textFill="WHITE" />
+                        <Label fx:id="brojproizvodjaca" alignment="CENTER" layoutX="61.0" layoutY="24.0" prefHeight="58.0" prefWidth="132.0" text="50" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="290.0" layoutY="33.0" prefHeight="83.0" prefWidth="197.0" style="-fx-background-color: #32aa9f;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="47.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/korisnik.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="99.0" layoutY="8.0" text="Kupci" textFill="WHITE" />
+                        <Label fx:id="brojkupaca" alignment="CENTER" layoutX="62.0" layoutY="28.0" prefHeight="58.0" prefWidth="132.0" text="50" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

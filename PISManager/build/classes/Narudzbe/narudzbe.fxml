@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="561.0" prefWidth="975.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Narudzbe.narudzbeController">
+   <children>
+      <Pane prefHeight="561.0" prefWidth="278.0" style="-fx-background-color: #fbf9f8;">
+         <children>
+            <TextField fx:id="txtkupac" editable="false" layoutX="41.0" layoutY="106.0" prefHeight="25.0" prefWidth="196.0" />
+            <Label layoutX="41.0" layoutY="81.0" text="Kupac" />
+            <TextField fx:id="txtproizvod" editable="false" layoutX="41.0" layoutY="168.0" prefHeight="25.0" prefWidth="196.0" />
+            <Label layoutX="41.0" layoutY="143.0" text="Proizvod" />
+            <TextField fx:id="txtkolicina" editable="false" layoutX="41.0" layoutY="232.0" prefHeight="25.0" prefWidth="196.0" />
+            <Label layoutX="41.0" layoutY="207.0" text="Kolicina" />
+            <ComboBox fx:id="boxstanje" layoutX="66.0" layoutY="329.0" prefHeight="25.0" prefWidth="127.0" promptText="Stanje" visibleRowCount="3" />
+            <JFXButton layoutX="92.0" layoutY="489.0" onAction="#dataClear" prefHeight="43.0" prefWidth="75.0" ripplerFill="#fbf9f8" style="-fx-background-color: #32aa9f;" text="Očisti" textFill="WHITE" />
+            <Label fx:id="lbl" alignment="CENTER" layoutY="539.0" prefHeight="17.0" prefWidth="278.0" textFill="RED" />
+            <JFXButton layoutX="92.0" layoutY="399.0" onAction="#azuzirajNarudzbu" prefHeight="43.0" prefWidth="75.0" ripplerFill="#fbf9f8" style="-fx-background-color: #32aa9f;" text="Ažuriraj" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="278.0" prefHeight="561.0" prefWidth="675.0">
+         <children>
+            <TableView fx:id="narudzbeTablica" layoutY="48.0" onMouseClicked="#prikazi" prefHeight="513.0" prefWidth="667.0" tableMenuButtonVisible="true">
+              <placeholder>
+                <Label text="Trenutno nema narudžbi"/>
+              </placeholder>
+                <columns>
+                <TableColumn fx:id="kupac" prefWidth="75.0" text="Kupac" />
+                <TableColumn fx:id="proizvod" prefWidth="75.0" text="Proizvod" />
+                  <TableColumn fx:id="kolicina" prefWidth="75.0" text="Količina" />
+                  <TableColumn fx:id="odobreno" prefWidth="75.0" text="Odobreno" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField fx:id="txtSearch" layoutX="40.0" layoutY="14.0" onKeyPressed="#searchNarudzbe" onKeyReleased="#searchNarudzbe" prefHeight="25.0" prefWidth="196.0" promptText="Pretraži narudžbe" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
